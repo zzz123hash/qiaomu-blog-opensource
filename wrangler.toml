@@ -24,8 +24,8 @@ service = "qiaomu-blog-opensource"
 [[d1_databases]]
 binding = "DB"
 
-[[r2_buckets]]
-binding = "IMAGES"
+# [[r2_buckets]]
+# binding = "IMAGES"
 
 # Optional Queue binding for background jobs. Uncomment after creating the queue.
 # [[queues.producers]]

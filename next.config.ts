@@ -1,8 +1,8 @@
-import { resolve } from "node:path";
-import { initOpenNextCloudflareForDev } from "@opennextjs/cloudflare";
+// import { resolve } from "node:path";
+// import { initOpenNextCloudflareForDev } from "@opennextjs/cloudflare";
 import type { NextConfig } from "next";
 
-void initOpenNextCloudflareForDev();
+// void initOpenNextCloudflareForDev(); // disabled for build
 
 const nextConfig: NextConfig = {
   // 图片优化（Cloudflare 有自己的优化）
@@ -10,9 +10,7 @@ const nextConfig: NextConfig = {
     unoptimized: true,
   },
 
-  turbopack: {
-    root: resolve(process.cwd()),
-  },
+  // turbopack: { root: resolve(process.cwd()) }, // disabled
 
   // 移除客户端环境变量暴露（安全风险）
   // 敏感信息应该只在服务端使用
