@@ -1,2 +1,23 @@
 name = "qiaomu-blog"
-pages_build_output_dir = ".open-next"
+main = "worker.ts"
+compatibility_date = "2026-04-14"
+compatibility_flags = ["nodejs_compat", "global_fetch_strictly_public"]
+
+[assets]
+directory = ".open-next/assets"
+binding = "ASSETS"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "qiaomu-blog"
+database_id = "fb5e9665-58a5-494c-8e7d-45d6460510d6"
+
+[[r2_buckets]]
+binding = "IMAGES"
+bucket_name = "qiaomu-blog-images"
+
+[vars]
+NEXT_PUBLIC_SITE_URL = "https://main.omnihex.xyz"
+AI_BASE_URL = "https://api.openai.com/v1"
+AI_MODEL = "gpt-4o-mini"
+WORKERS_AI_MODEL = "@cf/meta/llama-3.1-8b-instruct"
